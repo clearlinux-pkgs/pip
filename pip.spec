@@ -4,7 +4,7 @@
 #
 Name     : pip
 Version  : 7.1.2
-Release  : 23
+Release  : 24
 URL      : https://pypi.python.org/packages/source/p/pip/pip-7.1.2.tar.gz
 Source0  : https://pypi.python.org/packages/source/p/pip/pip-7.1.2.tar.gz
 Summary  : The PyPA recommended tool for installing Python packages.
