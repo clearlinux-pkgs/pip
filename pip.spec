@@ -4,7 +4,7 @@
 #
 Name     : pip
 Version  : 8.1.1
-Release  : 27
+Release  : 28
 URL      : https://pypi.python.org/packages/source/p/pip/pip-8.1.1.tar.gz
 Source0  : https://pypi.python.org/packages/source/p/pip/pip-8.1.1.tar.gz
 Summary  : The PyPA recommended tool for installing Python packages.
