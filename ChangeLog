@@ -1,3 +1,114 @@
+**9.0.1 (2016-11-06)**
+
+* Correct the deprecation message when not specifying a --format so that it
+  uses the correct setting name (``format``) rather than the incorrect one
+  (``list_format``) (:issue:`4058`).
+
+* Fix ``pip check`` to check all available distributions and not just the
+  local ones (:issue:`4083`).
+
+* Fix a crash on non ASCII characters from `lsb_release` (:issue:`4062`).
+
+* Fix an SyntaxError in an an used module of a vendored dependency
+  (:issue:`4059`).
+
+* Fix UNC paths on Windows (:issue:`4064`).
+
+
+**9.0.0 (2016-11-02)**
+
+* **BACKWARD INCOMPATIBLE** Remove the attempted autodetection of requirement
+  names from URLs, URLs must include a name via ``#egg=``.
+
+* **DEPRECATION** ``pip install --egg`` have been deprecated and will be
+  removed in the future. This "feature" has a long list of drawbacks which
+  break nearly all of pip's other features in subtle and hard-to-diagnose
+  ways.
+
+* **DEPRECATION** ``--default-vcs`` option (:issue:`4052`).
+
+* **WARNING** pip 9 cache can break forward compatibility with previous pip
+  versions if your package repository allows chunked responses (:issue:`4078`).
+
+* Add a ``pip check`` command to check installed packages dependencies
+  (:pull:`3750`).
+
+* Add option allowing user to abort pip operation if file/directory exists
+
+* Add Appveyor CI
+
+* Uninstall existing packages when performing an editable installation of
+  the same packages (:issue:`1548`).
+
+* ``pip show`` is less verbose by default. ``--verbose`` prints multiline fields.
+  (:pull:`3858`).
+
+* Add optional column formatting to ``pip list`` (:issue:`3651`).
+
+* Add ``--not-required`` option to ``pip list``, which lists packages that are
+  not dependencies of other packages.
+
+* Fix builds on systems with symlinked ``/tmp`` directory for custom
+  builds such as numpy (:pull:`3701`).
+
+* Fix regression in ``pip freeze``: when there is more than one git remote,
+  priority is given to the remote named ``origin`` (:pull:`3708`, :issue:`3616`).
+
+* Fix crash when calling ``pip freeze`` with invalid requirement installed
+  (:pull:`3704`, :issue:`3681`).
+
+* Allow multiple ``--requirement`` files in ``pip freeze`` (:pull:`3703`).
+
+* Implementation of pep-503 ``data-requires-python``. When this field is
+  present for a release link, pip will ignore the download when
+  installing to a Python version that doesn't satisfy the requirement.
+
+* ``pip wheel`` now works on editable packages too (it was only working on
+  editable dependencies before); this allows running ``pip wheel`` on the result
+  of ``pip freeze`` in presence of editable requirements (:pull:`3695`,
+  :issue:`3291`).
+
+* Load credentials from ``.netrc`` files (:pull:`3715`, :issue:`3569`).
+
+* Add ``--platform``, ``--python-version``, ``--implementation`` and ``--abi`` parameters to
+  ``pip download``. These allow utilities and advanced users to gather
+  distributions for interpreters other than the one pip is being run on.
+  (:pull:`3760`)
+
+* Skip scanning virtual environments, even when venv/bin/python is a dangling
+  symlink.
+
+* Added ``pip completion`` support for the ``fish`` shell.
+
+* Fix problems on Windows on Python 2 when username or hostname contains
+  non-ASCII characters (:issue:`3463`, :pull:`3970`, :pull:`4000`).
+
+* Use ``git fetch --tags`` to fetch tags in addition to everything else that
+  is normally fetched; this is necessary in case a git requirement url
+  points to a tag or commit that is not on a branch (:pull:`3791`)
+
+* Normalize package names before using in ``pip show`` (:issue:`3976`)
+
+* Raise when Requires-Python do not match the running version and add
+  ``--ignore-requires-python`` option as escape hatch (:pull:`3846`).
+
+* Report the correct installed version when performing an upgrade in some
+  corner cases (:issue:`2382`)
+
+* Add ``-i`` shorthand for ``--index`` flag in ``pip search``
+
+* Do not optionally load C dependencies in requests (:issue:`1840`,
+  :issue:`2930`, :issue:`3024`)
+
+* Strip authentication from SVN url prior to passing it to ``svn``
+  (:pull:`3697`, :issue:`3209`).
+
+* Also install in platlib with ``--target`` option (:pull:`3694`, :issue:`3682`).
+
+* Restore the ability to use inline comments in requirements files passed to
+  ``pip freeze`` (:issue:`3680`).
+
+
 **8.1.2 (2016-05-10)**
 
 * Fix a regression on systems with uninitialized locale (:issue:`3575`).
@@ -59,11 +170,11 @@
   :pull:`3495`).
 
 * Correct the behavior where interpreter specific tags (such as cp34) were
-  being used on later versions of the same interprter instead of only for that
+  being used on later versions of the same interpreter instead of only for that
   specific interpreter (:issue:`3472`).
 
 * Fix an issue where pip would erroneously install a 64 bit wheel on a 32 bit
-  Python running on a 64 bit OS X machine.
+  Python running on a 64 bit macOS machine.
 
 * Do not assume that all git repositories have an origin remote.
 
@@ -257,11 +368,11 @@
   cached files to them.
 
 * Move the pip version check until *after* any installs have been performed,
-  thus removing the extraenous warning when upgrading pip.
+  thus removing the extraneous warning when upgrading pip.
 
 * Added debug logging when using a cached wheel.
 
-* Respect platlib by default on platforms that have it separated from purlib.
+* Respect platlib by default on platforms that have it separated from purelib.
 
 * Upgrade packaging to 15.3.
 
@@ -470,7 +581,7 @@
 * Fix an issue where distutils installed projects were not actually uninstalled
   and deprecate attempting to uninstall them altogether.
 
-* Retry deleting directories incase a process like an antivirus is holding the
+* Retry deleting directories in case a process like an antivirus is holding the
   directory open temporarily.
 
 * Fix an issue where pip would hide the cursor on Windows but would not reshow
@@ -624,7 +735,7 @@
 
 * Added a virtualenv-specific configuration file. (:pull:`1364`)
 
-* Added site-wide configuation files. (:pull:`1978`)
+* Added site-wide configuration files. (:pull:`1978`)
 
 * Added an automatic check to warn if there is an updated version of pip
   available (:pull:`2049`).
@@ -867,7 +978,7 @@
 * Fixed :issue:`1006`, error when installing local projects with symlinks in
   Python 3. (:pull:`1311`)
 
-* The previously hidden ``--log-file`` otion, is now shown as a general option.
+* The previously hidden ``--log-file`` option, is now shown as a general option.
   (:pull:`1316`)
 
 
@@ -929,7 +1040,7 @@
 * Fixed :issue:`32` - pip fails when server does not send content-type header.
   Thanks Hugo Lopes Tavares and Kelsey Hightower (:pull:`872`).
 
-* "Vendorized" distlib as pip.vendor.distlib (https://distlib.readthedocs.org/).
+* "Vendorized" distlib as pip.vendor.distlib (https://distlib.readthedocs.io/).
 
 * Fixed git VCS backend with git 1.8.3. (:pull:`967`)
 
@@ -938,7 +1049,7 @@
 
 
 * Fixed a major backward incompatible change of parsing URLs to externally
-  hosted packages that got accidentily included in 1.3.
+  hosted packages that got accidentally included in 1.3.
 
 
 **1.3 (2013-03-07)**
@@ -955,7 +1066,7 @@
 
 * Improvements to sphinx docs and cli help. (:pull:`773`)
 
-* Fixed :issue:`707`, dealing with OS X temp dir handling, which was causing
+* Fixed :issue:`707`, dealing with macOS temp dir handling, which was causing
   global NumPy installs to fail. (:pull:`768`)
 
 * Split help output into general vs command-specific option groups.
@@ -1100,10 +1211,10 @@
   get the benefits of pip's support you must use Distribute rather than
   setuptools.
 
-* Fixed :issue:`57` - ignore py2app-generated OS X mpkg zip files in finder.
+* Fixed :issue:`57` - ignore py2app-generated macOS mpkg zip files in finder.
   Thanks Rene Dudfield.
 
-* Fixed :issue:`182` - log to ~/Library/Logs/ by default on OS X framework
+* Fixed :issue:`182` - log to ~/Library/Logs/ by default on macOS framework
   installs. Thanks Dan Callahan for report and patch.
 
 * Fixed :issue:`310` - understand version tags without minor version ("py3")
@@ -1130,7 +1241,7 @@
 
 * Fixed :issue:`366` - pip throws IndexError when it calls `scraped_rel_links`
 
-* Fixed :issue:`22` - pip search should set and return a userful shell status code
+* Fixed :issue:`22` - pip search should set and return a useful shell status code
 
 * Fixed :issue:`351` and :issue:`365` - added global ``--exists-action`` command line
   option to easier script file exists conflicts, e.g. from editable
@@ -1226,7 +1337,7 @@
 
     pip install git+https://github.com/pypa/pip/
 
-* Fixed :issue:`175` - Correctly locate build and source directory on Mac OS X.
+* Fixed :issue:`175` - Correctly locate build and source directory on macOS.
 
 * Added ``git+https://`` scheme to Git VCS backend.
 
@@ -1311,12 +1422,12 @@
   a non-writable symlink to the global location).
 * pip now logs to a central location by default (instead of creating
   ``pip-log.txt`` all over the place) and constantly overwrites the
-  file in question. On Unix and Mac OS X this is ``'$HOME/.pip/pip.log'``
+  file in question. On Unix and macOS this is ``'$HOME/.pip/pip.log'``
   and on Windows it's ``'%HOME%\\pip\\pip.log'``. You are still able to
   override this location with the ``$PIP_LOG_FILE`` environment variable.
   For a complete (appended) logfile use the separate ``'--log'`` command line
   option.
-* Fixed an issue with Git that left an editable packge as a checkout of a
+* Fixed an issue with Git that left an editable package as a checkout of a
   remote branch, even if the default behaviour would have been fine, too.
 * Fixed installing from a Git tag with older versions of Git.
 * Expand "~" in logfile and download cache paths.
@@ -1395,7 +1506,7 @@
 
 * Fixed uninstallation of easy_installed console_scripts.
 
-* Fixed uninstallation on Mac OS X Framework layout installs
+* Fixed uninstallation on macOS Framework layout installs
 
 * Fixed bug preventing uninstall of editables with source outside venv.
 
