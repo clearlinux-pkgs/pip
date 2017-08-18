@@ -6,15 +6,20 @@
 #
 Name     : pip
 Version  : 9.0.1
-Release  : 38
-URL      : https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz
-Source0  : https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz
+Release  : 39
+URL      : http://pypi.debian.net/pip/pip-9.0.1.tar.gz
+Source0  : http://pypi.debian.net/pip/pip-9.0.1.tar.gz
 Source99 : https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz.asc
 Summary  : The PyPA recommended tool for installing Python packages.
 Group    : Development/Tools
 License  : MIT
 Requires: pip-bin
 Requires: pip-python
+Requires: pretend
+Requires: pytest
+Requires: python-mock
+Requires: scripttest
+Requires: virtualenv
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : py
@@ -26,11 +31,9 @@ BuildRequires : setuptools
 BuildRequires : virtualenv
 
 %description
-pip
 ===
-The `PyPA recommended
-<https://packaging.python.org/en/latest/current/>`_
-tool for installing Python packages.
+        
+        The `PyPA recommended
 
 %package bin
 Summary: bin components for the pip package.
@@ -52,16 +55,22 @@ python components for the pip package.
 %setup -q -n pip-9.0.1
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1484562410
+export SOURCE_DATE_EPOCH=1503072568
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1484562410
+export SOURCE_DATE_EPOCH=1503072568
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+echo ----[ mark ]----
+cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
+echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
@@ -76,4 +85,5 @@ python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
 
 %files python
 %defattr(-,root,root,-)
-/usr/lib/python*/*
+/usr/lib/python2*/*
+/usr/lib/python3*/*
