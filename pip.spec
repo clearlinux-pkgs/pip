@@ -6,14 +6,15 @@
 #
 Name     : pip
 Version  : 9.0.1
-Release  : 39
+Release  : 40
 URL      : http://pypi.debian.net/pip/pip-9.0.1.tar.gz
 Source0  : http://pypi.debian.net/pip/pip-9.0.1.tar.gz
-Source99 : https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz.asc
+Source99 : http://pypi.debian.net/pip/pip-9.0.1.tar.gz.asc
 Summary  : The PyPA recommended tool for installing Python packages.
 Group    : Development/Tools
 License  : MIT
 Requires: pip-bin
+Requires: pip-legacypython
 Requires: pip-python
 Requires: pretend
 Requires: pytest
@@ -43,9 +44,18 @@ Group: Binaries
 bin components for the pip package.
 
 
+%package legacypython
+Summary: legacypython components for the pip package.
+Group: Default
+
+%description legacypython
+legacypython components for the pip package.
+
+
 %package python
 Summary: python components for the pip package.
 Group: Default
+Requires: pip-legacypython
 
 %description python
 python components for the pip package.
@@ -59,12 +69,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1503072568
+export SOURCE_DATE_EPOCH=1505055809
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1503072568
+export SOURCE_DATE_EPOCH=1505055809
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -83,7 +93,10 @@ echo ----[ mark ]----
 /usr/bin/pip3
 /usr/bin/pip3.6
 
-%files python
+%files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files python
+%defattr(-,root,root,-)
 /usr/lib/python3*/*
