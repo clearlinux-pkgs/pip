@@ -1,6 +1,5 @@
 # This file contains recursive sources that require this package
 Babel
-CNTK
 Cheetah
 ConfigArgParse
 Cython
@@ -12,6 +11,7 @@ LVM2
 Mako
 Markdown
 MarkupSafe
+ModemManager
 MySQL-python
 NetworkManager
 OpenSP
@@ -56,6 +56,7 @@ at-spi2-atk
 at-spi2-core
 atk
 atomicwrites
+attrs
 audit
 autofs
 awscli
@@ -76,14 +77,12 @@ boto3
 botocore
 bz2file
 cairo
-cc-oci-runtime
 ceph
 certifi
 cffi
 chardet
 cheese
 chrome-gnome-shell
-ciao-webui
 click
 clutter
 clutter-gst
@@ -115,6 +114,7 @@ dconf
 deap
 decorator
 diffoscope
+dnf
 dnspython
 docker
 docker-py
@@ -139,6 +139,7 @@ fontsproto
 fs
 funcsigs
 functools32
+fuse
 futures
 garcon
 gcr
@@ -151,13 +152,15 @@ geocode-glib
 gevent
 gimp
 git
+glances
 glib
 gmime
 gnome-autoar
+gnome-backgrounds
 gnome-bluetooth
 gnome-calendar
 gnome-desktop
-gnome-doc-utils
+gnome-font-viewer
 gnome-online-accounts
 gnome-panel
 gnome-session
@@ -213,6 +216,7 @@ jedi
 jedi-vim
 jmespath
 json-glib
+jsoncpp
 jsonschema
 jupyter
 jupyter-nbgallery
@@ -247,6 +251,7 @@ libgnome-keyring
 libgsystem
 libgtop
 libgudev
+libgusb
 libgweather
 libidn
 libjpeg-turbo
@@ -331,6 +336,7 @@ pandas
 pandocfilters
 pango
 paramiko
+parso
 passlib
 patchutils
 pbr
@@ -387,6 +393,7 @@ python-mock
 python-multilib
 python-pkgconfig
 python-subunit
+python-systemd
 python-tappy
 python-toml
 python-urwid
@@ -429,6 +436,7 @@ spice
 spice-gtk
 spice-protocol
 sqlparse
+sshfs
 subunit
 sure
 swig
@@ -445,7 +453,6 @@ testresources
 testscenarios
 testtools
 tflearn
-tig
 tigervnc
 tornado
 totem
@@ -490,3 +497,4 @@ xproto
 xtrans
 yasm
 yum-metadata-parser
+zstd
