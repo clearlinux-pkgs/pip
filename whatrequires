@@ -126,6 +126,7 @@ edk2
 entrypoints
 enum34
 eog
+evolution
 execnet
 exo
 extras
@@ -145,6 +146,7 @@ garcon
 gcr
 gcs-oauth2-boto-plugin
 gdk-pixbuf
+gdm
 geany
 gensim
 geoclue
@@ -155,15 +157,18 @@ git
 glances
 glib
 gmime
+gnome-applets
 gnome-autoar
 gnome-backgrounds
 gnome-bluetooth
+gnome-calculator
 gnome-calendar
 gnome-desktop
 gnome-font-viewer
 gnome-online-accounts
 gnome-panel
 gnome-session
+gnome-settings-daemon
 gnome-shell
 gnome-terminal
 gnome-tweak-tool
@@ -172,6 +177,7 @@ gobject-introspection
 google-apitools
 greenlet
 grilo
+grilo-plugins
 gst-plugins-bad
 gst-plugins-base
 gst-plugins-good
@@ -196,6 +202,7 @@ httpretty
 hypothesis
 ibus
 icalendar
+icdiff
 idna
 imagesize
 iotop
@@ -211,6 +218,7 @@ isa-l
 iso8601
 isort
 ister
+itstool
 javapackages-tools
 jedi
 jedi-vim
@@ -297,6 +305,7 @@ matplotlib
 mccabe
 mesa
 meson
+metacity
 mido
 mistune
 mod_wsgi
@@ -304,6 +313,7 @@ moka-icon-theme
 mozjs
 mozjs38
 mutt
+mutter
 nasm
 nautilus
 nbconvert
@@ -472,6 +482,7 @@ urllib3
 util-linux
 uwsgi
 vcversioner
+vinagre
 virt-viewer
 virtualenv
 vte
@@ -497,4 +508,5 @@ xproto
 xtrans
 yasm
 yum-metadata-parser
+zenity
 zstd
