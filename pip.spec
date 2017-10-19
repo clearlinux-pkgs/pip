@@ -6,7 +6,7 @@
 #
 Name     : pip
 Version  : 9.0.1
-Release  : 43
+Release  : 44
 URL      : http://pypi.debian.net/pip/pip-9.0.1.tar.gz
 Source0  : http://pypi.debian.net/pip/pip-9.0.1.tar.gz
 Source99 : http://pypi.debian.net/pip/pip-9.0.1.tar.gz.asc
