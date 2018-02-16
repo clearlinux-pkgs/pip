@@ -6,7 +6,7 @@
 #
 Name     : pip
 Version  : 9.0.1
-Release  : 47
+Release  : 48
 URL      : http://pypi.debian.net/pip/pip-9.0.1.tar.gz
 Source0  : http://pypi.debian.net/pip/pip-9.0.1.tar.gz
 Source99 : http://pypi.debian.net/pip/pip-9.0.1.tar.gz.asc
@@ -17,11 +17,6 @@ Requires: pip-bin
 Requires: pip-legacypython
 Requires: pip-python3
 Requires: pip-python
-Requires: pretend
-Requires: pytest
-Requires: python-mock
-Requires: scripttest
-Requires: virtualenv
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : py
@@ -88,12 +83,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1518745790
+export SOURCE_DATE_EPOCH=1518746817
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1518745790
+export SOURCE_DATE_EPOCH=1518746817
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
