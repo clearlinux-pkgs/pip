@@ -4,3 +4,5 @@ pytest
 py
 python-mock
 virtualenv
+setuptools-python
+setuptools-legacypython
