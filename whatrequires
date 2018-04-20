@@ -538,7 +538,6 @@ pyasn1-modules
 pycairo
 pycodestyle
 pycparser
-pycrypto
 pycurl
 pydot
 pydot_ng
@@ -564,7 +563,6 @@ python-augeas
 python-dateutil
 python-future
 python-gflags
-python-keyczar
 python-krbV
 python-magic
 python-memcached
