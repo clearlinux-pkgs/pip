@@ -4,7 +4,7 @@
 #
 Name     : pip
 Version  : 10.0.1
-Release  : 53
+Release  : 54
 URL      : http://pypi.debian.net/pip/pip-10.0.1.tar.gz
 Source0  : http://pypi.debian.net/pip/pip-10.0.1.tar.gz
 Summary  : The PyPA recommended tool for installing Python packages.
