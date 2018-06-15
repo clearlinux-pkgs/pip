@@ -17,7 +17,7 @@ BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : py
 BuildRequires : pytest
-BuildRequires : python-dev
+
 BuildRequires : python-mock
 BuildRequires : python3-dev
 BuildRequires : setuptools
