@@ -177,7 +177,6 @@ alsa-utils
 ansible
 apache-ant
 apache-hadoop
-apache-kafka
 apache-spark
 apache-zookeeper
 apipkg
@@ -223,8 +222,6 @@ brotli
 btrfs-progs
 bz2file
 c-ares
-ca-certs
-ca-certs-static
 cached-property
 cairo
 cargo
@@ -306,7 +303,6 @@ dtc
 e2fsprogs
 ecdsa
 edk2
-elasticsearch
 empy
 entrypoints
 enum34
@@ -394,7 +390,6 @@ goocanvas
 google-api-python-client
 google-apitools
 gpgme
-gradle
 graphene
 greenlet
 grilo
@@ -620,8 +615,6 @@ olefile
 open-vm-tools
 openconnect
 opencv
-openjdk
-openjdk9
 openvswitch
 orc
 orca
@@ -646,7 +639,6 @@ pecan
 pep8
 persistent
 pexpect
-php
 pickleshare
 pidgin
 pip
@@ -753,6 +745,7 @@ serf
 setproctitle
 setserial
 setuptools
+setuptools-legacy
 setuptools_scm
 setuptools_scm_git_archive
 shim

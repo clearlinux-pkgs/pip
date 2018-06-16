@@ -4,7 +4,7 @@
 #
 Name     : pip
 Version  : 10.0.1
-Release  : 58
+Release  : 59
 URL      : http://pypi.debian.net/pip/pip-10.0.1.tar.gz
 Source0  : http://pypi.debian.net/pip/pip-10.0.1.tar.gz
 Summary  : The PyPA recommended tool for installing Python packages.
@@ -18,7 +18,6 @@ BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : python3-dev
 BuildRequires : setuptools
-BuildRequires : setuptools-legacypython
 BuildRequires : setuptools-python
 
 %description
@@ -33,23 +32,6 @@ Requires: pip-license
 
 %description bin
 bin components for the pip package.
-
-
-%package extras
-Summary: extras components for the pip package.
-Group: Default
-
-%description extras
-extras components for the pip package.
-
-
-%package legacypython
-Summary: legacypython components for the pip package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the pip package.
 
 
 %package license
@@ -86,17 +68,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1529116747
-python2 setup.py build -b py2
+export SOURCE_DATE_EPOCH=1529164630
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1529116747
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/pip
 cp LICENSE.txt %{buildroot}/usr/share/doc/pip/LICENSE.txt
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -106,20 +85,9 @@ echo ----[ mark ]----
 
 %files bin
 %defattr(-,root,root,-)
-%exclude /usr/bin/pip2
-%exclude /usr/bin/pip2.7
 /usr/bin/pip
 /usr/bin/pip3
 /usr/bin/pip3.6
-
-%files extras
-%defattr(-,root,root,-)
-/usr/bin/pip2
-/usr/bin/pip2.7
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files license
 %defattr(-,root,root,-)
