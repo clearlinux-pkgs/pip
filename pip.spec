@@ -4,7 +4,7 @@
 #
 Name     : pip
 Version  : 10.0.1
-Release  : 57
+Release  : 58
 URL      : http://pypi.debian.net/pip/pip-10.0.1.tar.gz
 Source0  : http://pypi.debian.net/pip/pip-10.0.1.tar.gz
 Summary  : The PyPA recommended tool for installing Python packages.
@@ -12,18 +12,14 @@ Group    : Development/Tools
 License  : MIT
 Requires: pip-bin
 Requires: pip-python3
+Requires: pip-license
 Requires: pip-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : py
-BuildRequires : pytest
-
-BuildRequires : python-mock
 BuildRequires : python3-dev
 BuildRequires : setuptools
 BuildRequires : setuptools-legacypython
 BuildRequires : setuptools-python
-BuildRequires : virtualenv
 
 %description
 ===
@@ -33,6 +29,7 @@ BuildRequires : virtualenv
 %package bin
 Summary: bin components for the pip package.
 Group: Binaries
+Requires: pip-license
 
 %description bin
 bin components for the pip package.
@@ -53,6 +50,14 @@ Requires: python-core
 
 %description legacypython
 legacypython components for the pip package.
+
+
+%package license
+Summary: license components for the pip package.
+Group: Default
+
+%description license
+license components for the pip package.
 
 
 %package python
@@ -81,13 +86,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1524186422
+export SOURCE_DATE_EPOCH=1529116747
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1524186422
+export SOURCE_DATE_EPOCH=1529116747
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/pip
+cp LICENSE.txt %{buildroot}/usr/share/doc/pip/LICENSE.txt
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
 echo ----[ mark ]----
@@ -113,6 +120,10 @@ echo ----[ mark ]----
 %files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/pip/LICENSE.txt
 
 %files python
 %defattr(-,root,root,-)
