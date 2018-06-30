@@ -4,7 +4,7 @@
 #
 Name     : pip
 Version  : 10.0.1
-Release  : 59
+Release  : 60
 URL      : http://pypi.debian.net/pip/pip-10.0.1.tar.gz
 Source0  : http://pypi.debian.net/pip/pip-10.0.1.tar.gz
 Summary  : The PyPA recommended tool for installing Python packages.
@@ -68,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1529164630
+export SOURCE_DATE_EPOCH=1530317422
 python3 setup.py build -b py3
 
 %install
@@ -87,7 +87,7 @@ echo ----[ mark ]----
 %defattr(-,root,root,-)
 /usr/bin/pip
 /usr/bin/pip3
-/usr/bin/pip3.6
+/usr/bin/pip3.7
 
 %files license
 %defattr(-,root,root,-)
