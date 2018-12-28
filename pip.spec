@@ -4,7 +4,7 @@
 #
 Name     : pip
 Version  : 18.1
-Release  : 67
+Release  : 68
 URL      : https://files.pythonhosted.org/packages/45/ae/8a0ad77defb7cc903f09e551d88b443304a9bd6e6f124e75c0fbbf6de8f7/pip-18.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/45/ae/8a0ad77defb7cc903f09e551d88b443304a9bd6e6f124e75c0fbbf6de8f7/pip-18.1.tar.gz
 Summary  : The PyPA recommended tool for installing Python packages.
