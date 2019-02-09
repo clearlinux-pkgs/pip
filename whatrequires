@@ -8,11 +8,8 @@ PasteDeploy
 Pint
 PyWavelets
 Pygments
-QtAwesome
 Send2Trash
-SocksiPy-branch
 Tempita
-Werkzeug
 Whoosh
 XStatic-Angular
 XStatic-Angular-Bootstrap
@@ -38,7 +35,6 @@ XStatic-term.js
 acrn-hypervisor
 aeon
 aioeventlet
-amqp
 apipkg
 appdirs
 asn1crypto
@@ -60,7 +56,6 @@ ceph
 cffi
 chardet
 chrome-gnome-shell
-cloudpickle
 comedilib
 compat-libwebp-soname6
 compat-llvm-soname4
@@ -87,7 +82,6 @@ django_compressor
 doc8
 docker-py
 dockerpy-creds
-docutils
 dogpile.core
 dogtail
 empy
@@ -106,7 +100,6 @@ gdal
 glances
 hgtools
 httpretty
-icalendar
 iotop
 ipaddr
 ipaddress
@@ -115,7 +108,6 @@ ipython_genutils
 iso8601
 isodate
 isort
-itsdangerous
 jmespath
 jsonpointer
 jsonschema
@@ -123,7 +115,6 @@ jupyter
 jupyter-nbgallery
 jupyter-notebook-gist
 jupyter_core
-kazoo
 keystone
 kiwisolver
 libarchive-c
@@ -155,12 +146,10 @@ ordereddict
 oslosphinx
 pandocfilters
 parsedatetime
-parso
 passlib
 pathlib
 pbr-legacy
 pecan
-pika
 pika-pool
 pip-legacy
 portend
@@ -171,7 +160,6 @@ prettytable
 ptyprocess
 pyScss
 pyaml
-pycadf
 pycodestyle
 pydot_ng
 pydotplus
@@ -182,7 +170,6 @@ pyrsistent
 python-Levenshtein
 python-augeas
 python-ceilometerclient
-python-editor
 python-gflags
 python-magic
 python-memcached
@@ -212,7 +199,6 @@ smartcols
 snowballstemmer
 sos
 sphinxcontrib-websupport
-sqlalchemy-migrate
 sqlparse
 statsmodels
 suds-jurko
@@ -237,7 +223,6 @@ urllib3
 uwsgi
 vcversioner
 vine
-virt-manager
 warlock
 wcwidth
 webcolors
@@ -247,6 +232,4 @@ wrapt
 yasm
 yum-metadata-parser
 zake
-zope.event
-zope.interface
 zope.testrunner
