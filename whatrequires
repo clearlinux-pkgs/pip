@@ -1,6 +1,5 @@
 # This file contains recursive sources that require this package
 Babel
-ConfigArgParse
 Jinja2
 Mako
 Markdown
@@ -53,7 +52,6 @@ bz2file
 case
 ceilometer
 ceph
-cffi
 chardet
 chrome-gnome-shell
 comedilib
@@ -81,11 +79,9 @@ django-pyscss
 django_compressor
 doc8
 docker-py
-dockerpy-creds
 dogpile.core
 dogtail
 empy
-entrypoints
 enum34
 execnet
 extras
@@ -132,7 +128,6 @@ mozjs
 mozjs38
 mozjs52
 mozjs60
-mpi4py
 nbformat
 ndg_httpsclient
 neon
@@ -160,7 +155,6 @@ prettytable
 ptyprocess
 pyScss
 pyaml
-pycodestyle
 pydot_ng
 pydotplus
 pypandoc
