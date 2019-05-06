@@ -1,8 +1,6 @@
 # This file contains recursive sources that require this package
 PasteDeploy
 Pint
-PyWavelets
-Send2Trash
 XStatic-Angular
 XStatic-Angular-Bootstrap
 XStatic-Angular-Gettext
@@ -36,12 +34,10 @@ bashate
 bazel
 bkcharts
 bmap-tools
-bokeh
 boto
 bz2file
 ceilometer
 ceph
-chrome-gnome-shell
 comedilib
 compat-libwebp-soname6
 compat-llvm-soname4
@@ -55,8 +51,6 @@ cssselect
 cycler
 ddt
 deap
-debtcollector
-defusedxml
 deprecated-urllib3
 discover
 django-babel
@@ -154,7 +148,6 @@ setuptools_scm_git_archive
 simplegeneric
 smartcols
 sos
-sqlparse
 statsmodels
 suds-jurko
 tempest-lib
