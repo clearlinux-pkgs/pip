@@ -51,12 +51,12 @@ cssselect
 cycler
 ddt
 deap
+deprecated-isort
 deprecated-urllib3
 discover
 django-babel
 django-discover-runner
 django-pyscss
-django_compressor
 doc8
 docker-py
 dogpile.core
@@ -135,11 +135,8 @@ python-systemd
 python-urwid
 python3
 pyudev
-pyxdg
 rcssmin
 requestsexceptions
-retype
-rjsmin
 rsa
 scripttest
 semantic_version
@@ -160,7 +157,6 @@ testrepository
 testresources
 testtools
 tflearn
-trollius
 tzlocal
 unicodecsv
 uritemplate
@@ -171,7 +167,6 @@ vine
 wcwidth
 webencodings
 websockify
-wrapt
 yasm
 yum-metadata-parser
 zake
