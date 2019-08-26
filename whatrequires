@@ -23,7 +23,6 @@ XStatic-roboto-fontface
 XStatic-smart-table
 XStatic-term.js
 acrn-hypervisor
-aeon
 aioeventlet
 apipkg
 appdirs
@@ -93,7 +92,6 @@ mongodict
 monotonic
 mox
 mozjs
-mozjs38
 mozjs52
 mozjs60
 nbformat

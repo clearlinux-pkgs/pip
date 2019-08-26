@@ -1,5 +1,5 @@
 PKG_NAME := pip
-URL = https://files.pythonhosted.org/packages/aa/1a/62fb0b95b1572c76dbc3cc31124a8b6866cbe9139eb7659ac7349457cf7c/pip-19.2.2.tar.gz
+URL = https://files.pythonhosted.org/packages/00/9e/4c83a0950d8bdec0b4ca72afd2f9cea92d08eb7c1a768363f2ea458d08b4/pip-19.2.3.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
