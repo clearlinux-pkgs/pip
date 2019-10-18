@@ -41,12 +41,10 @@ deap
 discover
 django-babel
 django-discover-runner
-django-pyscss
 doc8
 docker-py
 dogpile.core
 dogtail
-enum34
 extras
 fasteners
 fixtures
@@ -138,5 +136,4 @@ vine
 wcwidth
 webencodings
 yasm
-yum-metadata-parser
 zake
