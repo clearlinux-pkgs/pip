@@ -4,7 +4,7 @@
 #
 Name     : pip
 Version  : 19.3.1
-Release  : 83
+Release  : 86
 URL      : https://files.pythonhosted.org/packages/ce/ea/9b445176a65ae4ba22dce1d93e4b5fe182f953df71a145f557cffaffc1bf/pip-19.3.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ce/ea/9b445176a65ae4ba22dce1d93e4b5fe182f953df71a145f557cffaffc1bf/pip-19.3.1.tar.gz
 Summary  : The PyPA recommended tool for installing Python packages.
@@ -15,13 +15,12 @@ Requires: pip-license = %{version}-%{release}
 Requires: pip-python = %{version}-%{release}
 Requires: pip-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
+BuildRequires : setuptools
 BuildRequires : setuptools-python
+BuildRequires : util-linux
 
 %description
-pip - The Python Package Installer
 ==================================
-.. image:: https://img.shields.io/pypi/v/pip.svg
-:target: https://pypi.org/project/pip/
 
 %package bin
 Summary: bin components for the pip package.
@@ -60,14 +59,14 @@ python3 components for the pip package.
 
 %prep
 %setup -q -n pip-19.3.1
+cd %{_builddir}/pip-19.3.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571412268
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1572990175
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -119,7 +118,7 @@ echo ----[ mark ]----
 %defattr(-,root,root,-)
 /usr/bin/pip
 /usr/bin/pip3
-/usr/bin/pip3.7
+/usr/bin/pip3.8
 
 %files license
 %defattr(0644,root,root,0755)

@@ -46,7 +46,6 @@ docker-py
 dogpile.core
 dogtail
 extras
-fasteners
 fixtures
 flake8-polyfill
 freetype
@@ -63,7 +62,6 @@ jupyter-notebook-gist
 keystone
 kiwisolver
 lazy-object-proxy
-libarchive-c
 logutils
 mccabe
 mongodict
@@ -111,11 +109,11 @@ requestsexceptions
 rsa
 scripttest
 setuptools-legacy
-setuptools_scm_git_archive
 simplegeneric
 smartcols
 sos
 suds-jurko
+tblib
 tempest-lib
 tensorboard
 tensorflow
