@@ -4,7 +4,7 @@
 #
 Name     : pip
 Version  : 19.3.1
-Release  : 86
+Release  : 87
 URL      : https://files.pythonhosted.org/packages/ce/ea/9b445176a65ae4ba22dce1d93e4b5fe182f953df71a145f557cffaffc1bf/pip-19.3.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ce/ea/9b445176a65ae4ba22dce1d93e4b5fe182f953df71a145f557cffaffc1bf/pip-19.3.1.tar.gz
 Summary  : The PyPA recommended tool for installing Python packages.
