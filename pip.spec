@@ -4,7 +4,7 @@
 #
 Name     : pip
 Version  : 19.3.1
-Release  : 87
+Release  : 88
 URL      : https://files.pythonhosted.org/packages/ce/ea/9b445176a65ae4ba22dce1d93e4b5fe182f953df71a145f557cffaffc1bf/pip-19.3.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ce/ea/9b445176a65ae4ba22dce1d93e4b5fe182f953df71a145f557cffaffc1bf/pip-19.3.1.tar.gz
 Summary  : The PyPA recommended tool for installing Python packages.
@@ -66,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1572990175
+export SOURCE_DATE_EPOCH=1576174156
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -110,6 +110,11 @@ python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
+## Remove excluded files
+rm -f %{buildroot}/usr/lib/python3.*/site-packages/pip/_vendor/distlib/t32.exe
+rm -f %{buildroot}/usr/lib/python3.*/site-packages/pip/_vendor/distlib/w32.exe
+rm -f %{buildroot}/usr/lib/python3.*/site-packages/pip/_vendor/distlib/w64.exe
+rm -f %{buildroot}/usr/lib/python3.*/site-packages/pip/_vendor/distlib/t64.exe
 
 %files
 %defattr(-,root,root,-)

@@ -1,2 +1,6 @@
 # This file contains the output files that need %exclude. Full path
 # names, one per line.
+/usr/lib/python3.*/site-packages/pip/_vendor/distlib/t32.exe
+/usr/lib/python3.*/site-packages/pip/_vendor/distlib/w32.exe
+/usr/lib/python3.*/site-packages/pip/_vendor/distlib/w64.exe
+/usr/lib/python3.*/site-packages/pip/_vendor/distlib/t64.exe
