@@ -34,7 +34,6 @@ cov-core
 crcmod
 cycler
 ddt
-deap
 django-babel
 django-discover-runner
 doc8
@@ -52,7 +51,6 @@ iso8601
 jsonpointer
 jupyter-notebook-gist
 keystone
-kiwisolver
 lazy-object-proxy
 logutils
 mccabe
@@ -62,7 +60,6 @@ mox
 mozjs
 mozjs52
 mozjs60
-nbformat
 ndg_httpsclient
 netaddr
 nose-cov
@@ -84,7 +81,6 @@ pyquery
 python-Levenshtein
 python-augeas
 python-ceilometerclient
-python-gflags
 python-mimeparse
 python-openzwave
 python-polib
@@ -102,6 +98,7 @@ tblib
 tempest-lib
 tensorboard
 tensorflow
+tensorflow-addons
 tensorflow-estimator
 tensorflow-probability
 tensorflow-serving
@@ -112,7 +109,6 @@ unicodecsv
 uritemplate
 urllib3
 vcversioner
-vine
 webencodings
 yasm
 zake
