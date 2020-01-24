@@ -66,7 +66,6 @@ nose-cov
 nose-cover3
 nose-parameterized
 pandocfilters
-passlib
 pika-pool
 pip-legacy
 positional
@@ -77,7 +76,6 @@ pyScss
 pyaml
 pydotplus
 pypandoc
-pyquery
 python-Levenshtein
 python-augeas
 python-ceilometerclient
