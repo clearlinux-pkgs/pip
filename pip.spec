@@ -4,7 +4,7 @@
 #
 Name     : pip
 Version  : 20.0.2
-Release  : 91
+Release  : 92
 URL      : https://files.pythonhosted.org/packages/8e/76/66066b7bc71817238924c7e4b448abdb17eb0c92d645769c223f9ace478f/pip-20.0.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/8e/76/66066b7bc71817238924c7e4b448abdb17eb0c92d645769c223f9ace478f/pip-20.0.2.tar.gz
 Summary  : The PyPA recommended tool for installing Python packages.
@@ -20,8 +20,58 @@ BuildRequires : setuptools-python
 %description
 pip - The Python Package Installer
 ==================================
+
 .. image:: https://img.shields.io/pypi/v/pip.svg
-:target: https://pypi.org/project/pip/
+   :target: https://pypi.org/project/pip/
+
+.. image:: https://readthedocs.org/projects/pip/badge/?version=latest
+   :target: https://pip.pypa.io/en/latest
+
+pip is the `package installer`_ for Python. You can use pip to install packages from the `Python Package Index`_ and other indexes.
+
+Please take a look at our documentation for how to install and use pip:
+
+* `Installation`_
+* `Usage`_
+
+Updates are released regularly, with a new version every 3 months. More details can be found in our documentation:
+
+* `Release notes`_
+* `Release process`_
+
+If you find bugs, need help, or want to talk to the developers please use our mailing lists or chat rooms:
+
+* `Issue tracking`_
+* `Discourse channel`_
+* `User IRC`_
+
+If you want to get involved head over to GitHub to get the source code, look at our development documentation and feel free to jump on the developer mailing lists and chat rooms:
+
+* `GitHub page`_
+* `Dev documentation`_
+* `Dev mailing list`_
+* `Dev IRC`_
+
+Code of Conduct
+---------------
+
+Everyone interacting in the pip project's codebases, issue trackers, chat
+rooms, and mailing lists is expected to follow the `PyPA Code of Conduct`_.
+
+.. _package installer: https://packaging.python.org/guides/tool-recommendations/
+.. _Python Package Index: https://pypi.org
+.. _Installation: https://pip.pypa.io/en/stable/installing.html
+.. _Usage: https://pip.pypa.io/en/stable/
+.. _Release notes: https://pip.pypa.io/en/stable/news.html
+.. _Release process: https://pip.pypa.io/en/latest/development/release-process/
+.. _GitHub page: https://github.com/pypa/pip
+.. _Dev documentation: https://pip.pypa.io/en/latest/development
+.. _Issue tracking: https://github.com/pypa/pip/issues
+.. _Discourse channel: https://discuss.python.org/c/packaging
+.. _Dev mailing list: https://groups.google.com/forum/#!forum/pypa-dev
+.. _User IRC: https://webchat.freenode.net/?channels=%23pypa
+.. _Dev IRC: https://webchat.freenode.net/?channels=%23pypa-dev
+.. _PyPA Code of Conduct: https://www.pypa.io/en/latest/code-of-conduct/
 
 %package bin
 Summary: bin components for the pip package.
@@ -53,6 +103,7 @@ python components for the pip package.
 Summary: python3 components for the pip package.
 Group: Default
 Requires: python3-core
+Provides: pypi(pip)
 
 %description python3
 python3 components for the pip package.
@@ -67,7 +118,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1579880545
+export SOURCE_DATE_EPOCH=1583202376
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -105,6 +156,7 @@ cp %{_builddir}/pip-20.0.2/src/pip/_vendor/pyparsing.LICENSE %{buildroot}/usr/sh
 cp %{_builddir}/pip-20.0.2/src/pip/_vendor/pytoml/LICENSE %{buildroot}/usr/share/package-licenses/pip/38e86f39df63d7c7d691c9e8e520ba90ef524f82
 cp %{_builddir}/pip-20.0.2/src/pip/_vendor/requests/LICENSE %{buildroot}/usr/share/package-licenses/pip/20b8d08a3b94eaf578419402976562021c949710
 cp %{_builddir}/pip-20.0.2/src/pip/_vendor/retrying.LICENSE %{buildroot}/usr/share/package-licenses/pip/1128f8f91104ba9ef98d37eea6523a888dcfa5de
+cp %{_builddir}/pip-20.0.2/src/pip/_vendor/six.LICENSE %{buildroot}/usr/share/package-licenses/pip/ac6ba16d8833b691bbbda7c8eb0c06891c78f98f
 cp %{_builddir}/pip-20.0.2/src/pip/_vendor/urllib3/LICENSE.txt %{buildroot}/usr/share/package-licenses/pip/a9d3f17b9e2494f5933ad68688e1c4691b86ba48
 cp %{_builddir}/pip-20.0.2/src/pip/_vendor/webencodings/LICENSE %{buildroot}/usr/share/package-licenses/pip/7fc0f2700538e74dea84d45d0dd3e76f01e8103c
 python3 -tt setup.py build  install --root=%{buildroot}
@@ -145,6 +197,7 @@ rm -f %{buildroot}/usr/lib/python3.*/site-packages/pip/_vendor/distlib/t64.exe
 /usr/share/package-licenses/pip/7fc0f2700538e74dea84d45d0dd3e76f01e8103c
 /usr/share/package-licenses/pip/a5234543d56e03c950c0080826b53a0cb97671af
 /usr/share/package-licenses/pip/a9d3f17b9e2494f5933ad68688e1c4691b86ba48
+/usr/share/package-licenses/pip/ac6ba16d8833b691bbbda7c8eb0c06891c78f98f
 /usr/share/package-licenses/pip/b2f7e71b77f14f21cd693e1c6fbe7236a8deac5f
 /usr/share/package-licenses/pip/c700a8b9312d24bdc57570f7d6a131cf63d89016
 /usr/share/package-licenses/pip/df156c6a0a89ed2a3bd4a473c68cf85907509ca0
