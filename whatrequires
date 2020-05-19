@@ -6,7 +6,6 @@ bazel
 boto
 ceph
 docker-py
-freetype
 keystone
 lazy-object-proxy
 mozjs
