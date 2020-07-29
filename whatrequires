@@ -6,6 +6,7 @@ bazel
 boto
 ceph
 docker-py
+home-assistant
 keystone
 lazy-object-proxy
 mozjs
