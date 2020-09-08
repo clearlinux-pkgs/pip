@@ -9,12 +9,11 @@ docker-py
 home-assistant
 keystone
 lazy-object-proxy
-mozjs
-mozjs60
 mozjs68
 performance
 pip-legacy
 pypandoc
+pytest-cov
 python-openzwave
 python3
 python37
