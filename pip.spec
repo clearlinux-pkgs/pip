@@ -4,7 +4,7 @@
 #
 Name     : pip
 Version  : 20.2.3
-Release  : 99
+Release  : 100
 URL      : https://files.pythonhosted.org/packages/59/64/4718738ffbc22d98b5223dbd6c5bb87c476d83a4c71719402935170064c7/pip-20.2.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/59/64/4718738ffbc22d98b5223dbd6c5bb87c476d83a4c71719402935170064c7/pip-20.2.3.tar.gz
 Summary  : The PyPA recommended tool for installing Python packages.
