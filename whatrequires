@@ -7,12 +7,10 @@ boto
 ceph
 docker-py
 home-assistant
-keystone
 lazy-object-proxy
 mozjs68
-performance
+mozjs78
 pip-legacy
-pypandoc
 pytest-cov
 python-openzwave
 python3
@@ -25,6 +23,5 @@ tensorflow-addons
 tensorflow-estimator
 tensorflow-probability
 tensorflow-serving
-unicodecsv
 urllib3
 yasm
