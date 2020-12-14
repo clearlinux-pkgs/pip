@@ -4,7 +4,7 @@
 #
 Name     : pip
 Version  : 20.3.1
-Release  : 104
+Release  : 105
 URL      : https://files.pythonhosted.org/packages/cb/5f/ae1eb8bda1cde4952bd12e468ab8a254c345a0189402bf1421457577f4f3/pip-20.3.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/cb/5f/ae1eb8bda1cde4952bd12e468ab8a254c345a0189402bf1421457577f4f3/pip-20.3.1.tar.gz
 Summary  : The PyPA recommended tool for installing Python packages.
