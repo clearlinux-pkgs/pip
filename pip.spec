@@ -4,7 +4,7 @@
 #
 Name     : pip
 Version  : 20.3.1
-Release  : 105
+Release  : 106
 URL      : https://files.pythonhosted.org/packages/cb/5f/ae1eb8bda1cde4952bd12e468ab8a254c345a0189402bf1421457577f4f3/pip-20.3.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/cb/5f/ae1eb8bda1cde4952bd12e468ab8a254c345a0189402bf1421457577f4f3/pip-20.3.1.tar.gz
 Summary  : The PyPA recommended tool for installing Python packages.
@@ -65,7 +65,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1607013639
+export SOURCE_DATE_EPOCH=1607972040
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -123,7 +123,7 @@ rm -f %{buildroot}/usr/lib/python3.*/site-packages/pip/_vendor/distlib/t64.exe
 %defattr(-,root,root,-)
 /usr/bin/pip
 /usr/bin/pip3
-/usr/bin/pip3.8
+/usr/bin/pip3.9
 
 %files license
 %defattr(0644,root,root,0755)
