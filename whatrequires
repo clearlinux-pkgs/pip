@@ -8,7 +8,6 @@ ceph
 docker-py
 home-assistant
 lazy-object-proxy
-mozjs68
 mozjs78
 pip-legacy
 pytest-cov
