@@ -1,8 +1,10 @@
 # This file contains recursive sources that require this package
+ConfigArgParse
 acrn-hypervisor
 asv
 bash_kernel
 bazel
+black
 boto
 ceph
 docker-py
@@ -15,6 +17,7 @@ python-openzwave
 python3
 python37
 setuptools-legacy
+sortedcontainers
 tblib
 tensorboard
 tensorflow
