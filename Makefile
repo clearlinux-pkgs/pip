@@ -1,5 +1,5 @@
 PKG_NAME := pip
-URL = https://files.pythonhosted.org/packages/b1/44/6e26d5296b83c6aac166e48470d57a00d3ed1f642e89adc4a4e412a01643/pip-21.1.2.tar.gz
+URL = https://files.pythonhosted.org/packages/4d/0c/3b63fe024414a8a48661cf04f0993d4b2b8ef92daed45636474c018cd5b7/pip-21.1.3.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
