@@ -1,22 +1,30 @@
 # This file contains recursive sources that require this package
 ConfigArgParse
+PyICU
 acrn-hypervisor
 asv
 bash_kernel
 bazel
+beniget
 black
 boto
 ceph
 docker-py
 home-assistant
 lazy-object-proxy
+libcst
 mozjs78
+parsedatetime
 pip-legacy
 pytest-cov
 python-openzwave
 python3
 python37
+pyusb
+rpmfile
+scipy
 setuptools-legacy
+setuptools-rust
 sortedcontainers
 tblib
 tensorboard
@@ -25,4 +33,5 @@ tensorflow-addons
 tensorflow-estimator
 tensorflow-probability
 tensorflow-serving
+tqdm
 urllib3
