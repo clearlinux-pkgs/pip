@@ -11,6 +11,7 @@ boto
 ceph
 docker-py
 home-assistant
+intervaltree
 lazy-object-proxy
 libcst
 mozjs78
