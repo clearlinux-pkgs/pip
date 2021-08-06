@@ -23,7 +23,6 @@ python3
 python37
 pyusb
 rpmfile
-scipy
 setuptools-legacy
 setuptools-rust
 sortedcontainers
@@ -34,5 +33,4 @@ tensorflow-addons
 tensorflow-estimator
 tensorflow-probability
 tensorflow-serving
-tqdm
 urllib3
