@@ -6,15 +6,15 @@ asv
 bash_kernel
 bazel
 beniget
-black
 boto
 ceph
 docker-py
 home-assistant
 intervaltree
+koji
 lazy-object-proxy
-libcst
 mozjs78
+mozjs91
 parsedatetime
 pip-legacy
 pytest-cov
@@ -25,6 +25,7 @@ pyusb
 rpmfile
 setuptools-legacy
 setuptools-rust
+setuptools_scm
 sortedcontainers
 tblib
 tensorboard
