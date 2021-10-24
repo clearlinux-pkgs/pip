@@ -11,6 +11,7 @@ ceph
 docker-py
 home-assistant
 intervaltree
+janus
 koji
 lazy-object-proxy
 mozjs78
