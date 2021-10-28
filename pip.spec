@@ -4,7 +4,7 @@
 #
 Name     : pip
 Version  : 21.3.1
-Release  : 127
+Release  : 128
 URL      : https://files.pythonhosted.org/packages/da/f6/c83229dcc3635cdeb51874184241a9508ada15d8baa337a41093fab58011/pip-21.3.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/da/f6/c83229dcc3635cdeb51874184241a9508ada15d8baa337a41093fab58011/pip-21.3.1.tar.gz
 Summary  : The PyPA recommended tool for installing Python packages.
@@ -68,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1635117656
+export SOURCE_DATE_EPOCH=1635442668
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -124,7 +124,7 @@ rm -f %{buildroot}*/usr/lib/python3.*/site-packages/pip/_vendor/distlib/t64.exe
 %defattr(-,root,root,-)
 /usr/bin/pip
 /usr/bin/pip3
-/usr/bin/pip3.9
+/usr/bin/pip3.10
 
 %files license
 %defattr(0644,root,root,0755)
