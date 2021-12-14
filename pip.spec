@@ -4,7 +4,7 @@
 #
 Name     : pip
 Version  : 21.3.1
-Release  : 132
+Release  : 133
 URL      : https://files.pythonhosted.org/packages/da/f6/c83229dcc3635cdeb51874184241a9508ada15d8baa337a41093fab58011/pip-21.3.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/da/f6/c83229dcc3635cdeb51874184241a9508ada15d8baa337a41093fab58011/pip-21.3.1.tar.gz
 Summary  : The PyPA recommended tool for installing Python packages.
